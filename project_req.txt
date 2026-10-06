@@ -1,0 +1,4 @@
+I want to make a JOB search agent, which when given a job site link, will abstract all the job profile, shortlist the job according to my resumes and requirements, And give me all the jobs relevant for me.
+Also It will store all the job sites ad all the suggested job profile in the database all the time, so that for my future reference i have a database ready.
+Make a virtual environmnet for it.
+Make a Agentic system using Langchain, langgraph, ..etc using a ollama api.

@@ -1,0 +1,57 @@
+shortlist_threshold: 50
+
+# These preferences apply to every resume discovered in resumes/.
+# Resume content itself determines role and skill relevance.
+job_preferences:
+  # Job families or title phrases you would like to prioritize.
+  preferred_job_terms:
+    - Backend Engineer
+    - Data Scientist
+    - Machine Learning Engineer
+
+  preferred_locations:
+    - Bengaluru
+    - Remote
+
+  # Reject known non-preferred locations, while keeping blank/unknown locations.
+  require_preferred_location: true
+
+  # Remote, virtual, WFH, and work-from-home jobs can be located anywhere.
+  allow_remote_outside_preferred_locations: true
+
+  preferred_work_modes:
+    - remote
+    - hybrid
+
+  # Examples: full-time, part-time, contract, temporary, internship.
+  preferred_employment_types:
+    - full-time
+    - internship
+
+  # Free-text values matched against the extracted experience level and title.
+  preferred_experience_levels:
+    - fresher
+    - entry
+    - junior
+
+  # Reject jobs whose descriptions require more years than this value.
+  maximum_required_experience_years: 2
+
+  # false keeps jobs that do not state a numeric experience requirement.
+  reject_unknown_experience: false
+
+  # Allowed values: include, prefer, exclude, only.
+  internship_preference: include
+
+  # Matching jobs are rejected before scoring.
+  excluded_title_terms:
+    - Director
+  excluded_locations: []
+
+# Crawler limits are safety bounds for a single manual scan.
+crawler:
+  max_pages: 100
+  max_depth: 2
+  request_timeout_seconds: 20
+  delay_seconds: 0.5
+  use_playwright_fallback: true
